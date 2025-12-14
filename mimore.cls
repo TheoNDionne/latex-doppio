@@ -37,7 +37,9 @@
 
 \ifxetexorluatex
   \RequirePackage{fontspec}
-  \setmainfont{XCharter}
+  \setmainfont{EB Garamond}
+  \usepackage{unicode-math}
+  \setmathfont{Libertinus Math}
 \else
   \RequirePackage[utf8]{inputenc}
 \fi
@@ -159,7 +161,7 @@
 % Fonts & colours
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\RequirePackage[charter]{mathdesign}
+% \RequirePackage[charter]{mathdesign}
 \RequirePackage[oldstyle,scale=0.7]{sourcecodepro}
 
 \usepackage{xcolor}
