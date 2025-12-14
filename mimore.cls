@@ -17,7 +17,7 @@
 \RequirePackage{ifluatex}
 
 % Automatic language support (last language is main language)
-\RequirePackage[english,french]{babel}
+\RequirePackage[french,english]{babel}
 
 \newif\ifxetexorluatex
 \ifxetex
@@ -261,7 +261,7 @@
 % Proper typesetting of units
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\RequirePackage[binary-units=true]{siunitx}
+\RequirePackage{siunitx}
 
 \sisetup{%
   detect-all           = true,
@@ -287,17 +287,17 @@
 \renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
 \renewcommand{\right}{\aftergroup\egroup\originalright}
 
-\DeclareMathOperator*{\argmin}          {arg\,min}
-\DeclareMathOperator {\dist}            {dist}
-\DeclareMathOperator {\im}              {im}
+% \DeclareMathOperator*{\argmin}          {arg\,min}
+% \DeclareMathOperator {\dist}            {dist}
+% \DeclareMathOperator {\im}              {im}
 
-% Proper differential operators
-\renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
+% % Proper differential operators
+% \renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
 
-% A nice way to typeset proper ordinal superscripts
-\newcommand  {\rd}{\textsuperscript{\textup{rd}}\xspace}
-\newcommand  {\nd}{\textsuperscript{\textup{nd}}\xspace}
-\renewcommand{\th}{\textsuperscript{\textup{th}}\xspace}
+% % A nice way to typeset proper ordinal superscripts
+% \newcommand  {\rd}{\textsuperscript{\textup{rd}}\xspace}
+% \newcommand  {\nd}{\textsuperscript{\textup{nd}}\xspace}
+% \renewcommand{\th}{\textsuperscript{\textup{th}}\xspace}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Penalties

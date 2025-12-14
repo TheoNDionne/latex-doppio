@@ -1,5 +1,5 @@
 \documentclass{mimore} % the document class
-\usepackage{math_func} % the tex jam macros
+% \usepackage{math_func} % the tex jam macros
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Cover Page Information
@@ -23,8 +23,7 @@
 % Specific packages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% This one must always go last
-\usepackage{subfiles}
+\usepackage{tikz}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Document
@@ -40,40 +39,9 @@
 % Main Content
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\section{Introduction}
-\subsection{Hello}
-Hi mommy!
-
-\begin{equation}
-    \frac{\text{d}f}{\mathrm{d}t} = \lim_{\Delta t\to0} \frac{f(t+\Delta t) - f(t)}{\Delta t}
-\end{equation}
-
-How a about a citation rn \cite{Edelsbrunner02}. And also:
-\begin{equation}
-    \int_{a}^{b}f(x)\,\text{d}x = F(b) - F(a)
-\end{equation}
-
-Let's test the texjam macros, how about the Schrodinger equation:
-\al{\boxed{
-    i\hbar\ddp{t}\ket{\psi} = \op{H}\ket{\psi}
-}}
-Ok seems to work
-
-Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-
-Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-
-How about
-\al{
-    \boldsymbol{\sigma}_x = \pmat{0&1\\1&0}
-}
-
-And for some reason, not a standard command:
-\al{
-    \ketbra{a}{b}
-}
-
+\input{./Sections/1.tex}
+\input{./Sections/2.tex}
+\cite{10.21468/SciPostPhysCodeb.23}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Back Matter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
