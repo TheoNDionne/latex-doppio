@@ -1,4 +1,6 @@
-\documentclass{mimore}
+\documentclass{mimore} % the document class
+
+\usepackage{math_func} % the tex jam macros
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Cover Page Information
@@ -52,9 +54,20 @@
         \int_{a}^{b}f(x)\,\text{d}x = F(b) - F(a)
     \end{equation}
 
+    Let's test the texjam macros, how about the Schrodinger equation:
+    \al{\boxed{
+        i\hbar\ddp{t}\ket{\psi} = \op{H}\ket{\psi}
+    }}
+    Ok seems to work
+
     Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
 
     Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+
+    How about
+    \al{
+        \boldsymbol{\sigma}_x = \pmat{0&1\\1&0}
+    }
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Back Matter
