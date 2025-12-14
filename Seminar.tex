@@ -1,5 +1,9 @@
 \documentclass{mimore}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover Page Information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \newcommand{\sAuthor  }{John Doe}
 \newcommand{\sTitle   }{What's in a name?}
 \newcommand{\sSubtitle}{An exciting study of names}
@@ -11,56 +15,40 @@
 \bibliography{Seminar}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% TikZ & pgfplots
+% Specific packages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{tikz}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.12}
-
-% Permits accessing the smallest and largest x value of a plot
-\makeatletter
-  \newcommand{\pgfplotsxmin}{\pgfplots@xmin}
-  \newcommand{\pgfplotsxmax}{\pgfplots@xmax}
-\makeatother
-
-% Permits accessing the smallest and largest y value of a plot
-\makeatletter
-  \newcommand{\pgfplotsymin}{\pgfplots@ymin}
-  \newcommand{\pgfplotsymax}{\pgfplots@ymax}
-\makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Begin of main document
+% Document
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-  \maketitle
+    \maketitle
+    \tableofcontents
+    \bookmarksetup{startatroot} % book mark level setting
 
-  \tableofcontents
-  \bookmarksetup{startatroot}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Main Content
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  % Add your sources here. You may also directly input LaTeX commands
-  % here, but the use of `\include` is strongly encouraged.
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-  % \include{Sources/Introduction}
-  % \include{Sources/Content}
+    \section{Introduction}
+    \subsection{Hello}
+    Hi mommy!
 
-  \section{Introduction}
-  \subsection{Hello}
-  Hi mommy!
-  \begin{equation}
-    \frac{\text{d}f}{\mathrm{d}t} = \lim_{\Delta t\to0} \frac{f(t+\Delta t) - f(t)}{\Delta t}
-  \end{equation}
+    \begin{equation}
+        \frac{\text{d}f}{\mathrm{d}t} = \lim_{\Delta t\to0} \frac{f(t+\Delta t) - f(t)}{\Delta t}
+    \end{equation}
+    How a about a citation rn \cite{Edelsbrunner02}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Back matter: don't change anything here
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Back Matter
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-  \bookmarksetup{startatroot}
-  \printbibliography
+    \bookmarksetup{startatroot} % ehh no idea boss
+    \printbibliography
 
 \end{document}
