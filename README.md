@@ -1,4 +1,4 @@
-# latex-doppio: My personal take on latex-mimore
+# latex-doppio: My personal take on latex-mimore (spiritually inspired by TeX-Jam)
 
 This repository contains a minimal & modern LaTeX template forked from Bastian Rieck's brilliantly simple latex-mimore.
 

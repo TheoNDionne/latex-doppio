@@ -32,9 +32,9 @@
 
 \ifxetexorluatex
   \RequirePackage{fontspec}
-  \setmainfont{EB Garamond}
+  \setmainfont{EB Garamond} % Soupy beautiful font
   \usepackage{unicode-math}
-  \setmathfont{Libertinus Math}
+  \setmathfont{Libertinus Math} % clean cohesive math font
 \else
   \RequirePackage[utf8]{inputenc}
 \fi
@@ -156,7 +156,6 @@
 % Fonts & colours
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \RequirePackage[charter]{mathdesign}
 \RequirePackage[oldstyle,scale=0.7]{sourcecodepro}
 
 \usepackage{xcolor}
@@ -200,26 +199,26 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Pseudo-code
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Further information about styling and other issues with this package
-% is available under:
-%
-% https://tex.stackexchange.com/questions/1375/what-is-a-good-package-for-displaying-algorithms
-%
+% %
+% % Further information about styling and other issues with this package
+% % is available under:
+% %
+% % https://tex.stackexchange.com/questions/1375/what-is-a-good-package-for-displaying-algorithms
+% %
 
-\RequirePackage{algorithm}
-\RequirePackage{algorithmicx}
-\RequirePackage{algpseudocode}
+% \RequirePackage{algorithm}
+% \RequirePackage{algorithmicx}
+% \RequirePackage{algpseudocode}
 
-% Ensures that the `\autoref` command works with algorithms as well. The
-% text may have to be changed for other languages, though.
-\newcommand{\algorithmautorefname}{Algorithm}
+% % Ensures that the `\autoref` command works with algorithms as well. The
+% % text may have to be changed for other languages, though.
+% \newcommand{\algorithmautorefname}{Algorithm}
 
-% Use a small font in the body of an algorithm. This removes the weight
-% of algorithm environments and makes them typographically more light.
-\makeatletter
-  \algrenewcommand\ALG@beginalgorithmic{\small}
-\makeatother
+% % Use a small font in the body of an algorithm. This removes the weight
+% % of algorithm environments and makes them typographically more light.
+% \makeatletter
+%   \algrenewcommand\ALG@beginalgorithmic{\small}
+% \makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Paragraph lists & compact enumerations
@@ -312,19 +311,19 @@
 % Title setup
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\titlehead{%
-  \begin{tabular}{ll}
-    Name:           & \sAuthor\\
-    Course:         & \sCourse\\
-    Student number: & \sNumber\\
-    Date:           & \sDate\\
-  \end{tabular}
-}
+% \titlehead{%
+%   \begin{tabular}{ll}
+%     Name:           & \sAuthor\\
+%     Course:         & \sCourse\\
+%     Student number: & \sNumber\\
+%     Date:           & \sDate\\
+%   \end{tabular}
+% }
 \subject  {\sSubject}
 \author   {\sAuthor}
 \title    {\sTitle}
 \subtitle {\sSubtitle}
-\date     {}
+\date     {\sDate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Headers
