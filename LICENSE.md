@@ -1,3 +1,5 @@
+Modified by Théo N. Dionne, carry over the original license:
+
 Copyright (c) 2018 Bastian Rieck
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
