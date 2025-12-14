@@ -2,43 +2,46 @@
 \ProvidesClass{mimore}[2017/05/01 Minimal modern report class]
 
 \LoadClass[paper=a4,
-           twoside,
+           % twoside,
            pagesize,
            11pt,
            DIV=10,
-           BCOR=10mm,
+           % BCOR=0mm, % this is only for bookbindings
            cleardoublepage=empty,
            numbers=noenddot,
            titlepage,
            toc=bibliography]{scrartcl}
 
-\RequirePackage{ifpdf}
-\RequirePackage{ifxetex}
-\RequirePackage{ifluatex}
+
+% I KNOW I MIGHT EVENTUALLY CURSE AT THIS MOD BUT...
+
+% \RequirePackage{ifpdf}
+% \RequirePackage{ifxetex}
+% \RequirePackage{ifluatex}
+
+% \newif\ifxetexorluatex
+% \ifxetex
+%   \xetexorluatextrue
+% \else
+%   \ifluatex
+%     \xetexorluatextrue
+%   \else
+%     \xetexorluatexfalse
+%   \fi
+% \fi
+
+% \ifxetexorluatex
+%   \RequirePackage{fontspec}
+%   \setmainfont{EB Garamond} % Soupy beautiful font
+% \else
+%   \RequirePackage[utf8]{inputenc}
+% \fi
+
 
 % Automatic language support (last language is main language)
-\RequirePackage[french,english]{babel}
+\RequirePackage[english,french]{babel}
 
-\newif\ifxetexorluatex
-\ifxetex
-  \xetexorluatextrue
-\else
-  \ifluatex
-    \xetexorluatextrue
-  \else
-    \xetexorluatexfalse
-  \fi
-\fi
-
-\ifxetexorluatex
-  \RequirePackage{fontspec}
-  \setmainfont{EB Garamond} % Soupy beautiful font
-  \usepackage{unicode-math}
-  \setmathfont{Libertinus Math} % clean cohesive math font
-\else
-  \RequirePackage[utf8]{inputenc}
-\fi
-
+% Quotes
 \usepackage{csquotes}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -156,6 +159,10 @@
 % Fonts & colours
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Main font
+\RequirePackage{fontspec}
+% \setmainfont{Libertinus Serif} % Straight-laced
+\setmainfont{EB Garamond} % Soupy and gorgeous
 \RequirePackage[oldstyle,scale=0.7]{sourcecodepro}
 
 \usepackage{xcolor}
@@ -189,36 +196,6 @@
 % Otherwise, only the counter will be printed.
 \captionsetup{subrefformat=parens}
 
-% Styling the algorithm captions. They should not be larger than the captions for the figures and
-% tables.
-\captionsetup[algorithm]{%
-  font      = small,
-  labelsep  = colon
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Pseudo-code
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %
-% % Further information about styling and other issues with this package
-% % is available under:
-% %
-% % https://tex.stackexchange.com/questions/1375/what-is-a-good-package-for-displaying-algorithms
-% %
-
-% \RequirePackage{algorithm}
-% \RequirePackage{algorithmicx}
-% \RequirePackage{algpseudocode}
-
-% % Ensures that the `\autoref` command works with algorithms as well. The
-% % text may have to be changed for other languages, though.
-% \newcommand{\algorithmautorefname}{Algorithm}
-
-% % Use a small font in the body of an algorithm. This removes the weight
-% % of algorithm environments and makes them typographically more light.
-% \makeatletter
-%   \algrenewcommand\ALG@beginalgorithmic{\small}
-% \makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Paragraph lists & compact enumerations
@@ -276,28 +253,14 @@
 % Mathematics
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\RequirePackage{amsmath}
-\RequirePackage{amsthm}
-\RequirePackage{dsfont}
+% COMPLETELY MIGRATED TO MATH FUNC
 
 % Fix the spacing of \left and \right. Use these with the proper bracket
 % in order to ensure that they scale automatically.
-\let\originalleft\left
-\let\originalright\right
-\renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
-\renewcommand{\right}{\aftergroup\egroup\originalright}
-
-% \DeclareMathOperator*{\argmin}          {arg\,min}
-% \DeclareMathOperator {\dist}            {dist}
-% \DeclareMathOperator {\im}              {im}
-
-% % Proper differential operators
-% \renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
-
-% % A nice way to typeset proper ordinal superscripts
-% \newcommand  {\rd}{\textsuperscript{\textup{rd}}\xspace}
-% \newcommand  {\nd}{\textsuperscript{\textup{nd}}\xspace}
-% \renewcommand{\th}{\textsuperscript{\textup{th}}\xspace}
+% \let\originalleft\left
+% \let\originalright\right
+% \renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
+% \renewcommand{\right}{\aftergroup\egroup\originalright}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Penalties
@@ -338,6 +301,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Typefaces for sections
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Using the KOMA options, pretty deep for me lol
 
 \setkomafont{sectioning}{\normalfont\bfseries}
 \setkomafont{descriptionlabel}{\normalfont\bfseries}

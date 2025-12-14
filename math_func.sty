@@ -1,76 +1,28 @@
-% The math macros that I use, taken directly from
 
+% The math macros that I use, taken directly from tex jam
 %----------------------------------------------------------------------
-%\usepackage{amssymb} % Mathematical fonts.
-%\usepackage{amsfonts} % Mathematical fonts.
+
+\RequirePackage{amsmath}
+\RequirePackage{amsthm}
+\RequirePackage{dsfont}
+
 \usepackage[nice]{nicefrac} % Nicer fractions
 \usepackage{braket} % Dirac Notation.
-\usepackage{bbm} % More bold fonts.
-%\usepackage{mathrsfs} % Mathematical fonts.
-\usepackage{esint} % Integrals
+% \usepackage{esint} % Integrals
 \usepackage{cancel} % Allows to scratch expressions.
 \usepackage{mathtools} % Tools for math formating.
 \usepackage{slashed} % Allows to slash individual characters.
 \usepackage{xargs} % Better handling of optional arguments for commands
-%----------------------------------------------------------------------
-%\usepackage{lmodern} % Fonts.
+\usepackage{amssymb} % Mathematical symbols.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Mathématiques et physique
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% SI Units -----------------------
-% The package 'siunitx' causes unresolved crashes (as of 22/08/31)
-% \newcommand{\ampere}{\text{A}}
-% \renewcommand{\AA}{\mathring{\mathrm{A}}}
-% \newcommand{\angstrom}{\AA}
-% \newcommand{\bell}{\text{B}}
-% \newcommand{\celsius}{\degree\text{C}}
-% \newcommand{\coulomb}{\text{C}}
-% \newcommand{\degree}{\,^{\circ}}
-% \newcommand{\farad}{\text{F}}
-% \newcommand{\electro}{\text{e}}
-% \newcommand{\gram}{\text{g}}
-% \newcommand{\henry}{\text{H}}
-% \newcommand{\hertz}{\text{Hz}}
-% \newcommand{\hour}{\text{h}}
-% \newcommand{\joule}{\text{J}}
-% \newcommand{\kelvin}{\text{K}}
-% \newcommand{\meter}{\text{m}}
-% \newcommand{\minute}{\text{m}}
-% \newcommand{\mole}{\text{mol}}
-% \newcommand{\newton}{\text{N}}
-% \newcommand{\ohm}{\Omega}
-% \newcommand{\pascal}{\text{Pa}}
-% \newcommand{\rad}{\text{rad}}
-% \newcommand{\second}{\text{s}}
-% \newcommand{\tesla}{\text{T}}
-% \newcommand{\torr}{\text{Torr}}
-% \newcommand{\volt}{\text{V}}
-% \newcommand{\watt}{\text{W}}
-% %
-% \newcommand{\tera}{\text{T}}
-% \newcommand{\giga}{\text{G}}
-% \newcommand{\mega}{~\text{M}}
-% \newcommand{\kilo}{~\text{k}}
-% \newcommand{\deci}{\text{d}}
-% \newcommand{\centi}{\text{c}}
-% \newcommand{\milli}{\text{m}}
-% \newcommand{\micro}{\mu}
-% \newcommand{\nano}{\text{n}}
-% \newcommand{\pico}{\text{p}}
-% \newcommand{\femto}{\text{f}}
-% %
-% \newcommand{\units}[1]{\text{#1}}
-% \newcommand{\tothe}[1]{\textsuperscript{#1}}
-% %
-% \newcommand{\per}{\text{/}}
+% The math fonts
+\usepackage{unicode-math}
+\setmathfont{Libertinus Math} % clean cohesive math font
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n} % Getting mathcal back
 
-
-% % Better epsilon -----------------------
-% \let\oldepsilon\epsilon
-% \let\epsilon\varepsilon
-% \let\varepsilon\oldepsilon
-
+\usepackage{mathrsfs} % Mathscript
+\usepackage{amsfonts} % Mathematical fonts.
+\usepackage{bbm} % More bold fonts.
 
 % Better \bar -----------------------
 \renewcommand{\bar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
@@ -153,7 +105,7 @@
 \newcommand{\C}{\mathbbm{C}} % Complex numbers.
 
 % Polarizing operator notation ----------------------
-\newcommand{\op}[1]{\hat{\mathrm{#1}}} % Im{#}
+\newcommand{\op}[1]{\hat{\mathrm{#1}}}
 
 % ketbra --------------------------------------
 \newcommand{\ketbra}[2]{\ket{#1}\!\!\bra{#2}}
